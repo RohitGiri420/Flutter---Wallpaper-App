@@ -73,12 +73,19 @@ class UiHelper{
     );
   }
 
-  category(){
-    return GridView.builder(gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 300), itemBuilder: (context, index) {
-      return Container(
-        
+  category(String image){
+    return Card(
+        elevation: 5,
+        child: Container(
+          clipBehavior: Clip.antiAlias,
+
+          child: Image.network('$image',fit: BoxFit.cover,),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+          ),
+        ),
       );
-    },);
+
 
 
   }
