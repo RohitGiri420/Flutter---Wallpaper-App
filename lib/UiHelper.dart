@@ -59,4 +59,27 @@ class UiHelper{
     );
   }
 
+  ColorTone(color){
+    return Card(
+      elevation: 5,
+      child:  Container(
+        width: 65,
+        height: 65,
+        decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.circular(10)
+        ),
+      ),
+    );
+  }
+
+  category(){
+    return GridView.builder(gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 300), itemBuilder: (context, index) {
+      return Container(
+        
+      );
+    },);
+
+
+  }
 }
